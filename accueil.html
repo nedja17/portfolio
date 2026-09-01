@@ -5,20 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio - BTS SIO SISR</title>
     <style>
-        /* clair */
+        /* Variables du thème sombre par défaut */
         :root {
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-color: #0f172a;
-            --text-muted: #64748b;
-            --accent-color: #0284c7;
-            --accent-hover: #0369a1;
-            --border-color: #e2e8f0;
-            --header-bg: #ffffff;
-        }
-
-        /* sombre */
-        body:has(#theme-toggle:checked) {
             --bg-color: #0f172a;
             --card-bg: #1e293b;
             --text-color: #f8fafc;
@@ -29,7 +17,7 @@
             --header-bg: #090d16;
         }
 
-        /* 3. STYLE GÉNÉRAL */
+        /* STYLE GÉNÉRAL */
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             margin: 0;
@@ -37,7 +25,6 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
-            transition: background-color 0.3s ease, color 0.3s ease;
             scroll-behavior: smooth;
         }
 
@@ -63,7 +50,6 @@
         .nav-container {
             display: flex;
             align-items: center;
-            gap: 2rem;
         }
 
         nav ul {
@@ -83,34 +69,6 @@
 
         nav a:hover {
             color: var(--accent-color);
-        }
-
-        /* bouton ccs pour le thème sombre ou bien le theme claire */
-        #theme-toggle {
-            display: none; 
-        }
-
-        .theme-btn {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            color: var(--text-color);
-            padding: 0.5rem 0.75rem;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.2s;
-            user-select: none;
-        }
-
-        .theme-btn:hover {
-            border-color: var(--accent-color);
-        }
-
-        body:has(#theme-toggle:checked) .theme-btn::before {
-            content: "☀️ Mode clair";
-        }
-        body:not(:has(#theme-toggle:checked)) .theme-btn::before {
-            content: "🌙 Mode sombre";
         }
 
         main {
@@ -179,11 +137,16 @@
             color: var(--text-muted);
             font-size: 0.95rem;
         }
+        
+        /* Adaptation pour mobiles */
+        @media (max-width: 600px) {
+            .stages-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
-    <input type="checkbox" id="theme-toggle">
-
     <header>
         <h1>Portfolio - SISR</h1>
         <div class="nav-container">
@@ -194,7 +157,6 @@
                     <li><a href="#stages">Stages</a></li>
                 </ul>
             </nav>
-            <label for="theme-toggle" class="theme-btn"></label>
         </div>
     </header>
 
@@ -207,7 +169,7 @@
 
         <section id="stages">
             <h2>Mes Stages</h2>
-            <p>Vous retrouvez ci-dessous les differents stages ainsi que les différentes chose que j'ai pu faire tout au long du parcours professionnelles.</p>
+            <p>Vous retrouverez ci-dessous les différents stages ainsi que les différentes choses que j'ai pu faire tout au long de mon parcours professionnel.</p>
             
             <div class="stages-grid">
                 <div class="stage-card">
@@ -223,7 +185,7 @@
                     <div>
                         <h3>Stage 2 : À venir</h3>
                         <p><strong>Statut :</strong> Recherche / En cours de préparation</p>
-                        <p>a venir.</p>
+                        <p>À venir.</p>
                     </div>
                     <a href="stage2.html" class="btn">Voir le détail</a>
                 </div>
