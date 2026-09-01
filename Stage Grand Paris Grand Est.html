@@ -129,6 +129,7 @@
             text-decoration: none;
             border-radius: 6px;
             margin-top: 1rem;
+            margin-right: 0.5rem;
             font-weight: 600;
             transition: background-color 0.2s;
         }
@@ -137,7 +138,6 @@
             background-color: var(--accent-hover);
         }
 
-        /* Style pour les images de tes projets */
         .project-image {
             max-width: 100%;
             height: auto;
@@ -148,12 +148,21 @@
             display: block;
         }
         
-        /* Grille pour afficher plusieurs images côte à côte */
         .image-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1rem;
             margin-top: 1rem;
+        }
+        
+        /* Conteneur pour aligner les boutons de retour en bas */
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
         }
     </style>
 </head>
@@ -175,11 +184,14 @@
             <!-- PRÉSENTATION DE L'ENTREPRISE -->
             <h3>Présentation de Grand Paris Grand Est (GPGE)</h3>
             <p>L'Établissement Public Territorial Grand Paris Grand Est (GPGE) regroupe plusieurs communes (14 au total) et gère de nombreuses compétences intercommunales (assainissement, urbanisme, gestion des déchets, etc.).</p>
-            <p>GPGE comprends 1 Président et 13 Vice-Présidents (tous maire d'une des communes)
+            <p>GPGE comprend 1 Président et 13 Vice-Présidents (tous maires d'une des communes).</p>
             <p>Lors de ce stage, j'ai intégré la <strong>Direction des Systèmes d'Information (DSI)</strong>. La DSI a pour rôle de maintenir en conditions opérationnelles le parc informatique réparti sur plusieurs sites distants (Maison du Territoire, Jupiter, Maison du Droit) et de garantir la sécurité des systèmes et des données des collaborateurs de l'établissement.</p>
             
-            <img src="logo-gpge.jpg" alt="Logo GPGE" class="project-image" style="max-width: 300px;">
-            <img src="liste président GPGE.jpg" alt="Logo GPGE" class="project-image" style="max-width: 300px;">
+            <div class="image-grid">
+                <img src="images/logo-gpge.jpg" alt="Logo GPGE" class="project-image">
+                <img src="images/liste-president-gpge.jpg" alt="Liste Président GPGE" class="project-image">
+                <img src="images/Organigramme DSI 2026.pptx" alt="Organigrame" class="project-image">
+            </div>
 
             <h3>1. Projet Sécurité : Déploiement de la MFA</h3>
             <ul>
@@ -187,8 +199,7 @@
                 <li>Création de supports de présentation et animation de multiples webinaires pour aider les futurs utilisateurs à comprendre ce qu'est le MFA.</li>
                 <li>Réalisation de tests bêta avec le SIG et animation des sessions officielles de déploiement sur plusieurs sites.</li>
             </ul>
-            <!-- Emplacement image MFA -->
-            <img src="ton-image-mfa.jpg" alt="Présentation ou configuration MFA" class="project-image">
+            <img src="images/ton-image-mfa.jpg" alt="Présentation ou configuration MFA" class="project-image">
 
             <h3>2. Administration Réseau et Infrastructure</h3>
             <ul>
@@ -198,9 +209,8 @@
                 <li>Récupération d'un NAS en fin de vie et formatage de dizaines de disques durs (HDD) d'anciens PC de GPGE.</li>
             </ul>
             
-            <!-- Grille pour afficher des photos réseau côte à côte -->
             <div class="image-grid">
-                <img src="baie de brassage 7ème étages.jpg" alt="Baie de brassage" class="project-image">
+                <img src="images/baie-de-brassage-7eme-etages.jpg" alt="Baie de brassage 7ème étage" class="project-image">
             </div>
 
             <h3>3. Support Utilisateur et Gestion de Parc (Niveau 1 & 2)</h3>
@@ -210,8 +220,7 @@
                 <li>Gestion courante via l'outil de ticketing : déverrouillage de comptes Windows, réinitialisation de codes PIN, problèmes d'impression, et traitement d'un cas de mail frauduleux (Phishing).</li>
                 <li>Configuration et dépannage de téléphones fixes professionnels et de la connectivité Teams.</li>
             </ul>
-            <!-- Emplacement image Support / GLPI / PC -->
-            <img src="ticket-zendesk.jpg" alt="Interface outil de ticketing" class="project-image">
+            <img src="images/ticket-zendesk.jpg" alt="Interface outil de ticketing" class="project-image">
 
             <h3>Compétences BTS SIO validées</h3>
             <ul>
@@ -233,9 +242,11 @@
                 <span class="tag">Ticketing via ZenDesk</span>
             </div>
 
-            <a href="accueil.html#accueil" class="btn">Retour à l'accueil</a>
-            <a href="accueil.html#stages" class="btn">Retour aux stages</a>
-            <a href="accueil.html#experiences" class="btn">Retour aux expériences professionnelles<a/>
+            <div class="button-group">
+                <a href="accueil.html#accueil" class="btn">Retour à l'accueil</a>
+                <a href="accueil.html#stages" class="btn">Retour aux stages</a>
+                <a href="accueil.html#experiences" class="btn">Retour aux expériences professionnelles</a>
+            </div>
         </section>
     </main>
 </body>
