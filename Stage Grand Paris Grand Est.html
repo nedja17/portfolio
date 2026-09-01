@@ -136,6 +136,25 @@
         .btn:hover {
             background-color: var(--accent-hover);
         }
+
+        /* Style pour les images de tes projets */
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        /* Grille pour afficher plusieurs images côte à côte */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -143,7 +162,7 @@
         <h1>Portfolio - SISR</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Retour à l'accueil</a></li>
+                <li><a href="accueil.html">Retour à l'accueil</a></li>
             </ul>
         </nav>
     </header>
@@ -151,17 +170,24 @@
     <main>
         <section>
             <h2>Technicien Support, Réseaux et Infrastructure</h2>
-            <p><strong>Entreprise :</strong> Grand Paris Grand Est (DSI)</p>
             <p><strong>Période :</strong> Du 04/05 au 12/06 2026</p>
             
-            <p>Lors de ce stage, j'ai intégré la DSI de GPGE afin de répondre aux différents besoins liés à l'entreprise. Durant cette période, j'ai également eu la chance de participer activement au déploiement de nouveaux projets de sécurité.</p>
+            <!-- PRÉSENTATION DE L'ENTREPRISE -->
+            <h3>Présentation de Grand Paris Grand Est (GPGE)</h3>
+            <p>L'Établissement Public Territorial Grand Paris Grand Est (GPGE) regroupe plusieurs communes et gère de nombreuses compétences intercommunales (assainissement, urbanisme, gestion des déchets, etc.).</p>
+            <p>Lors de ce stage, j'ai intégré la <strong>Direction des Systèmes d'Information (DSI)</strong>. La DSI a pour rôle de maintenir en conditions opérationnelles le parc informatique réparti sur plusieurs sites distants (Maison du Territoire, Jupiter, Maison du Droit) et de garantir la sécurité des systèmes et des données des collaborateurs de l'établissement.</p>
+            
+            <!-- Tu peux mettre ici une photo des locaux ou du logo de GPGE -->
+            <!-- <img src="logo-gpge.png" alt="Locaux GPGE" class="project-image" style="max-width: 300px;"> -->
 
             <h3>1. Projet Sécurité : Déploiement de la MFA</h3>
             <ul>
                 <li>Participation au projet de mise en place d'une double authentification (MFA) au sein de la DSI.</li>
                 <li>Création de supports de présentation et animation de multiples webinaires pour aider les futurs utilisateurs à comprendre ce qu'est le MFA.</li>
-                <li>Réalisation de tests bêta avec le SIG et animation des sessions officielles de déploiement sur plusieurs sites (Maison du Territoire, Jupiter, Maison du Droit).</li>
+                <li>Réalisation de tests bêta avec le SIG et animation des sessions officielles de déploiement sur plusieurs sites.</li>
             </ul>
+            <!-- Emplacement image MFA -->
+            <img src="ton-image-mfa.jpg" alt="Présentation ou configuration MFA" class="project-image">
 
             <h3>2. Administration Réseau et Infrastructure</h3>
             <ul>
@@ -170,14 +196,22 @@
                 <li>Gestion de la sécurité réseau : demandes de mise en liste blanche (Whitelist) suite à des blocages par le pare-feu Fortinet et résolution de problèmes VPN.</li>
                 <li>Récupération d'un NAS en fin de vie et formatage de dizaines de disques durs (HDD) d'anciens PC de GPGE.</li>
             </ul>
+            
+            <!-- Grille pour afficher des photos réseau côte à côte -->
+            <div class="image-grid">
+                <img src="baie-brassage.jpg" alt="Baie de brassage" class="project-image">
+                <img src="switch-cisco.jpg" alt="Configuration Switch" class="project-image">
+            </div>
 
             <h3>3. Support Utilisateur et Gestion de Parc (Niveau 1 & 2)</h3>
             <ul>
-                <li>Configuration de A à Z (mises à jour, installation logicielle, sessions) de dizaines de postes pour de nouveaux collaborateurs (D.A.E, D.A.J.C.P.P, SAF, etc.).</li>
+                <li>Configuration de A à Z (mises à jour, installation logicielle, sessions) de dizaines de postes pour de nouveaux collaborateurs.</li>
                 <li>Diagnostic et résolution de pannes matérielles avancées (erreurs BIOS "Inaccessible_Boot_Device", problèmes de pilotes) et déclenchement d'interventions sous garantie avec Dell Support Assist.</li>
                 <li>Gestion courante via l'outil de ticketing : déverrouillage de comptes Windows, réinitialisation de codes PIN, problèmes d'impression, et traitement d'un cas de mail frauduleux (Phishing).</li>
                 <li>Configuration et dépannage de téléphones fixes professionnels et de la connectivité Teams.</li>
             </ul>
+            <!-- Emplacement image Support / GLPI / PC -->
+            <img src="ticket-zendesk.jpg" alt="Interface outil de ticketing" class="project-image">
 
             <h3>Compétences BTS SIO validées</h3>
             <ul>
