@@ -5,27 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio - BTS SIO SISR</title>
     <style>
+        /* clair */
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #0f172a;
+            --text-muted: #64748b;
+            --accent-color: #0284c7;
+            --accent-hover: #0369a1;
+            --border-color: #e2e8f0;
+            --header-bg: #ffffff;
+        }
+
+        /* sombre */
+        body:has(#theme-toggle:checked) {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --border-color: #334155;
+            --header-bg: #090d16;
+        }
+
+        /* 3. STYLE GÉNÉRAL */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7f6;
-            color: #333;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            scroll-behavior: smooth;
         }
 
         header {
-            background-color: #2c3e50;
-            color: #fff;
+            background-color: var(--header-bg);
+            border-bottom: 1px solid var(--border-color);
             padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         header h1 {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             margin: 0;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
         }
 
         nav ul {
@@ -37,84 +75,160 @@
         }
 
         nav a {
-            color: #fff;
+            color: var(--text-color);
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
+            transition: color 0.2s;
         }
 
         nav a:hover {
-            color: #3498db;
+            color: var(--accent-color);
+        }
+
+        /* bouton ccs pour le thème sombre ou bien le theme claire */
+        #theme-toggle {
+            display: none; 
+        }
+
+        .theme-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+            user-select: none;
+        }
+
+        .theme-btn:hover {
+            border-color: var(--accent-color);
+        }
+
+        body:has(#theme-toggle:checked) .theme-btn::before {
+            content: "☀️ Mode clair";
+        }
+        body:not(:has(#theme-toggle:checked)) .theme-btn::before {
+            content: "🌙 Mode sombre";
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
         }
 
         section {
-            padding: 2rem;
-            max-width: 800px;
-            margin: 2rem auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            padding: 2.5rem;
+            background: var(--card-bg);
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
         section h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
+            color: var(--text-color);
+            border-bottom: 2px solid var(--accent-color);
             padding-bottom: 0.5rem;
             margin-top: 0;
+            font-size: 1.5rem;
         }
 
         .btn {
             display: inline-block;
-            background-color: #3498db;
-            color: white;
+            background-color: var(--accent-color);
+            color: #ffffff !important;
             padding: 0.7rem 1.2rem;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 6px;
             margin-top: 1rem;
-            font-weight: bold;
+            font-weight: 600;
+            transition: background-color 0.2s;
         }
 
         .btn:hover {
-            background-color: #2980b9;
+            background-color: var(--accent-hover);
+        }
+
+        .stages-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
         .stage-card {
-            background: #f9fbfb;
-            border-left: 4px solid #3498db;
-            padding: 1rem;
-            margin-top: 1rem;
-            border-radius: 0 4px 4px 0;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .stage-card h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: var(--accent-color);
+        }
+
+        .stage-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
         }
     </style>
 </head>
 <body>
+    <input type="checkbox" id="theme-toggle">
+
     <header>
-        <h1>Mon Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#stages">Stages</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Portfolio - SISR</h1>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <!-- renvoie direct vers ce qu'on a cliqué -->
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#stages">Stages</a></li>
+                </ul>
+            </nav>
+            <label for="theme-toggle" class="theme-btn"></label>
+        </div>
     </header>
 
-    <section id="accueil">
-        <h2>Bonjour, je suis étudiant en BTS SIO SISR</h2>
-        <p>Lycée Merleau-Ponty à Rochefort</p>
-        <a href="cv.pdf" class="btn" target="_blank">Télécharger mon CV</a>
-    </section>
+    <main>
+        <section id="accueil">
+            <h2>Bonjour, je suis étudiant en BTS SIO SISR</h2>
+            <p>Lycée Merleau-Ponty à Rochefort. Bienvenue sur mon portfolio professionnel regroupant mes compétences en administration systèmes, réseaux et infrastructures.</p>
+            <a href="Ethan Marguery Duret CV.pdf" class="btn" target="_blank">Télécharger mon CV</a>
+        </section>
 
-    <section id="stages">
-        <h2>Mes Stages</h2>
-        <div class="stage-card">
-            <h3>Stage 1 : Technicien Support, Réseaux Et Infrastucture</h3>
-            <p><strong>Entreprise :</strong> Grand Paris Grand Est</p>
-            <p>Missions : Support utilisateur, gestion des pannes, intervention sur le réseau.</p>
-        </div>
-        <div class="stage-card">
-            <h3>Stage 2 : (à venir)</h3>
-            <p><strong>Statut :</strong> À venir (Prochainement)</p>
-        </div>
-    </section>
+        <section id="stages">
+            <h2>Mes Stages</h2>
+            <p>Vous retrouvez ci-dessous les differents stages ainsi que les différentes chose que j'ai pu faire tout au long du parcours professionnelles.</p>
+            
+            <div class="stages-grid">
+                <div class="stage-card">
+                    <div>
+                        <h3>Stage 1 : Grand Paris Grand Est</h3>
+                        <p><strong>Rôle :</strong> Technicien Support, Réseaux et Infrastructure</p>
+                        <p>Support utilisateur, gestion des pannes et interventions réseau.</p>
+                    </div>
+                    <a href="stage1.html" class="btn">Voir le détail</a>
+                </div>
+
+                <div class="stage-card">
+                    <div>
+                        <h3>Stage 2 : À venir</h3>
+                        <p><strong>Statut :</strong> Recherche / En cours de préparation</p>
+                        <p>a venir.</p>
+                    </div>
+                    <a href="stage2.html" class="btn">Voir le détail</a>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
