@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio - BTS SIO SISR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Mon Portfolio</h1>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#stages">Stages</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="accueil">
+        <h2>Bonjour, je suis étudiant en BTS SIO SISR</h2>
+        <p>Lycée Merleau-Ponty à Rochefort</p>
+        <a href="cv.pdf" class="btn" target="_blank">Télécharger mon CV</a>
+    </section>
+
+    <section id="stages">
+        <h2>Mes Stages</h2>
+        <div class="stage-card">
+            <h3>Stage 1 : Technicien Support et Réseaux</h3>
+            <p><strong>Entreprise :</strong> Nom de l'entreprise</p>
+            <p>Missions : Support utilisateur, gestion des pannes, intervention sur le réseau.</p>
+        </div>
+        <div class="stage-card">
+            <h3>Stage 2 : Administration Systèmes et Réseaux</h3>
+            <p><strong>Statut :</strong> À venir (Prochainement)</p>
+        </div>
+    </section>
+</body>
+</html>
