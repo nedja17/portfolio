@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail du Stage 1 - Grand Paris Grand Est</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --border-color: #334155;
+            --header-bg: #090d16;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.25rem;
+            margin: 0;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        section {
+            padding: 2.5rem;
+            background: var(--card-bg);
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: var(--text-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        section h3 {
+            color: var(--accent-color);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 0.8rem;
+        }
+
+        ul {
+            color: var(--text-muted);
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+        }
+
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background-color: var(--border-color);
+            color: var(--text-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff !important;
+            padding: 0.7rem 1.2rem;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 1rem;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portfolio - SISR</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Retour à l'accueil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Technicien Support, Réseaux et Infrastructure</h2>
+            <p><strong>Entreprise :</strong> Grand Paris Grand Est (DSI)</p>
+            <p><strong>Période :</strong> Du 04/05 au 12/06 2026</p>
+            
+            <p>Lors de ce stage, j'ai intégré la DSI pour assurer le maintien en conditions opérationnelles du parc informatique et participer activement au déploiement de nouveaux projets de sécurité.</p>
+
+            <h3>1. Projet Sécurité : Déploiement de la MFA</h3>
+            <ul>
+                <li>Participation au projet de mise en place d'une double authentification (MFA) au sein de la DSI.</li>
+                <li>Création de supports de présentation (diaporamas, captures d'écran) et animation de webinaires pour les utilisateurs.</li>
+                <li>Réalisation de tests bêta avec le SIG et animation des sessions officielles de déploiement sur plusieurs sites (Maison du Territoire, Jupiter).</li>
+            </ul>
+
+            <h3>2. Administration Réseau et Infrastructure</h3>
+            <ul>
+                <li>Intervention sur les baies de brassage pour reconnecter les postes dans leurs VLANs respectifs suite à des déménagements de bureaux.</li>
+                <li>Placement de nouveaux switchs et vérification de l'état des bornes Wi-Fi avec réinitialisation des équipements défectueux.</li>
+                <li>Gestion de la sécurité réseau : demandes de mise en liste blanche (Whitelist) suite à des blocages par le pare-feu Fortinet et résolution de problèmes VPN.</li>
+                <li>Récupération d'un NAS en fin de vie et formatage de dizaines de disques durs (HDD).</li>
+            </ul>
+
+            <h3>3. Support Utilisateur et Gestion de Parc (Niveau 1 & 2)</h3>
+            <ul>
+                <li>Configuration de A à Z (mises à jour, installation logicielle, sessions) de dizaines de postes pour de nouveaux collaborateurs (D.A.E, D.A.J.C.P.P, SAF).</li>
+                <li>Diagnostic et résolution de pannes matérielles avancées (erreurs BIOS "Inaccessible_Boot_Device", problèmes de pilotes) et déclenchement d'interventions sous garantie avec Dell Support Assist.</li>
+                <li>Gestion courante via l'outil de ticketing : déverrouillage de comptes Windows, réinitialisation de codes PIN, problèmes d'impression, et traitement d'un cas de mail frauduleux (Phishing).</li>
+                <li>Configuration et dépannage de téléphones fixes professionnels et de la connectivité Teams.</li>
+            </ul>
+
+            <h3>Compétences BTS SIO validées</h3>
+            <ul>
+                <li>Organiser son développement professionnel.</li>
+                <li>Mettre à disposition des utilisateurs un service informatique.</li>
+                <li>Travailler en mode projet.</li>
+                <li>Répondre aux incidents et aux demandes d'assistance et d'évolution.</li>
+                <li>Gérer le patrimoine informatique.</li>
+            </ul>
+
+            <h3>Environnement technique</h3>
+            <div class="tag-container">
+                <span class="tag">Windows 10</span>
+                <span class="tag">Active Directory (AD)</span>
+                <span class="tag">Microsoft 365 / MFA</span>
+                <span class="tag">Fortinet (Pare-feu)</span>
+                <span class="tag">VLAN / Switch</span>
+                <span class="tag">Dell Support Assist</span>
+                <span class="tag">Ticketing</span>
+            </div>
+
+            <a href="accueil.html#stages" class="btn">Retour aux stages</a>
+        </section>
+    </main>
+</body>
+</html>
