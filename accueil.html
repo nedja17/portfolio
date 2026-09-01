@@ -4,16 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio - BTS SIO SISR</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 0.7rem 1.2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        .stage-card {
+            background: #f9fbfb;
+            border-left: 4px solid #3498db;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0 4px 4px 0;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <h1>Mon Portfolio</h1>
         <nav>
-            <h1>Mon Portfolio</h1>
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#stages">Stages</a></li>
-                <li><a href="#projets">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -28,12 +107,12 @@
     <section id="stages">
         <h2>Mes Stages</h2>
         <div class="stage-card">
-            <h3>Stage 1 : Technicien Support et Réseaux</h3>
-            <p><strong>Entreprise :</strong> Nom de l'entreprise</p>
+            <h3>Stage 1 : Technicien Support, Réseaux Et Infrastucture</h3>
+            <p><strong>Entreprise :</strong> Grand Paris Grand Est</p>
             <p>Missions : Support utilisateur, gestion des pannes, intervention sur le réseau.</p>
         </div>
         <div class="stage-card">
-            <h3>Stage 2 : Administration Systèmes et Réseaux</h3>
+            <h3>Stage 2 : (à venir)</h3>
             <p><strong>Statut :</strong> À venir (Prochainement)</p>
         </div>
     </section>
