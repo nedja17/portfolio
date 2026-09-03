@@ -147,15 +147,14 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             display: block;
         }
-        
+
         .image-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1rem;
             margin-top: 1rem;
         }
-        
-        /* Conteneur pour aligner les boutons de retour en bas */
+
         .button-group {
             display: flex;
             flex-wrap: wrap;
@@ -163,6 +162,53 @@
             margin-top: 2rem;
             border-top: 1px solid var(--border-color);
             padding-top: 1.5rem;
+        }
+
+        .intro-gpge-container {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            margin-top: 1.5rem;
+        }
+
+        .intro-gpge-texte {
+            flex: 2;
+        }
+
+        .intro-gpge-logo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .project-image-v2 {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .presidents-gpge-container {
+            margin-top: 3rem;
+        }
+
+        .president-image-straight {
+            transform: rotate(-90deg);
+            width: 100%;
+            max-width: 1000px;
+            margin: 1rem auto;
+        }
+
+        @media (max-width: 768px) {
+            .intro-gpge-container {
+                flex-direction: column;
+            }
+            .intro-gpge-logo {
+                width: 100%;
+                margin-top: 1rem;
+            }
         }
     </style>
 </head>
@@ -181,17 +227,23 @@
             <h2>Technicien Support, Réseaux et Infrastructure</h2>
             <p><strong>Période :</strong> Du 04/05 au 12/06 (2026)</p>
             
-            <!-- présentation de l'entreprise-->
-            <h3>Présentation de Grand Paris Grand Est (GPGE)</h3>
-            <p>L'Établissement Public Territorial Grand Paris Grand Est (GPGE) regroupe plusieurs communes (14 au total) et gère de nombreuses compétences intercommunales (assainissement, urbanisme, gestion des déchets, etc.).</p>
-            <p>GPGE comprend 1 Président et 13 Vice-Présidents (tous maires d'une des communes).</p>
-            <p>Lors de ce stage, j'ai intégré la <strong>Direction des Systèmes d'Information (DSI)</strong>. La DSI a pour rôle de maintenir en conditions opérationnelles le parc informatique réparti sur plusieurs sites distants (Maison du Territoire, Jupiter, Maison du Droit) et de garantir la sécurité des systèmes et des données des collaborateurs de l'établissement.</p>
-    
-            <div class="image-grid">
-                <p><strong>Logo</strong></p>
-                <img src="GPGE image/logo-gpge.jpg" alt="Logo GPGE" class="project-image">
-                <p><strong>Liste des présidents en 2026</strong></p>
-                <img src="GPGE image/liste-president-GPGE.jpg" alt="Liste President GPGE" class="project-image">
+            <div class="intro-gpge-container">
+                <div class="intro-gpge-texte">
+                    <h3>Présentation de Grand Paris Grand Est (GPGE)</h3>
+                    <p>L'Établissement Public Territorial Grand Paris Grand Est (GPGE) regroupe plusieurs communes (14 au total) et gère de nombreuses compétences intercommunales (assainissement, urbanisme, gestion des déchets, etc.).</p>
+                    <p>GPGE comprend 1 Président et 13 Vice-Présidents (tous maires d'une des communes).</p>
+                    <p>Lors de ce stage, j'ai intégré la <strong>Direction des Systèmes d'Information (DSI)</strong>. La DSI a pour rôle de maintenir en conditions opérationnelles le parc informatique réparti sur plusieurs sites distants (Maison du Territoire, Jupiter, Maison du Droit) et de garantir la sécurité des systèmes et des données des collaborateurs de l'établissement.</p>
+                </div>
+                
+                <div class="intro-gpge-logo">
+                    <p><strong>Logo</strong></p>
+                    <img src="GPGE image/logo-gpge.jpg" alt="Logo GPGE" class="project-image-v2">
+                </div>
+            </div>
+
+            <div class="presidents-gpge-container">
+                <h3>Liste des présidents en 2026</h3>
+                <img src="GPGE image/liste-president-GPGE.jpg" alt="Liste President GPGE" class="project-image-v2 president-image-straight">
             </div>
 
             <h3>1. Projet Sécurité : Déploiement de la MFA</h3>
@@ -200,7 +252,6 @@
                 <li>Création de supports de présentation et animation de multiples webinaires pour aider les futurs utilisateurs à comprendre ce qu'est le MFA.</li>
                 <li>Réalisation de tests bêta avec le SIG et animation des sessions officielles de déploiement sur plusieurs sites.</li>
             </ul>
-            <!--<img src="GPGE image/.jpg" alt="Présentation MFA" class="project-image"> -->
 
             <h3>2. Administration Réseau et Infrastructure</h3>
             <ul>
@@ -221,7 +272,6 @@
                 <li>Gestion courante via l'outil de ticketing : déverrouillage de comptes Windows, réinitialisation de codes PIN, problèmes d'impression, et traitement d'un cas de mail frauduleux (Phishing).</li>
                 <li>Configuration et dépannage de téléphones fixes professionnels et de la connectivité Teams.</li>
             </ul>
-            <!-- <img src="GPGE image/.jpg" alt="Interface outil de ticketing" class="project-image"> -->
 
             <h3>Compétences BTS SIO validées</h3>
             <ul>
