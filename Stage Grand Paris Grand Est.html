@@ -24,6 +24,7 @@
             color: var(--text-color);
             line-height: 1.6;
             scroll-behavior: smooth;
+            overflow-x: hidden; /* Empêche le défilement horizontal si l'image dépasse encore un millimètre */
         }
 
         header {
@@ -192,13 +193,16 @@
 
         .presidents-gpge-container {
             margin-top: 3rem;
+            text-align: center; /* Centre le h3 et l'image */
         }
 
         .president-image-straight {
-            transform: rotate(-90deg);
-            width: 100%;
-            max-width: 1000px;
-            margin: 1rem auto;
+            /* Rotation de 90 degrés ET réduction de la taille à 75% (-25%) */
+            /* Si tu veux la réduire de 30%, remplace 0.75 par 0.7 */
+            transform: rotate(90deg) scale(0.75);
+            max-height: 800px; /* Limite la hauteur d'origine pour éviter que la largeur (après rotation) ne déborde */
+            margin: -5% auto; /* Marge négative pour compenser l'espace vide créé par le scale() */
+            display: block;
         }
 
         @media (max-width: 768px) {
@@ -208,6 +212,9 @@
             .intro-gpge-logo {
                 width: 100%;
                 margin-top: 1rem;
+            }
+            .president-image-straight {
+                transform: rotate(90deg) scale(0.5); /* Sur mobile, on la réduit encore plus pour éviter de casser l'écran */
             }
         }
     </style>
@@ -236,7 +243,6 @@
                 </div>
                 
                 <div class="intro-gpge-logo">
-                    <p><strong>Logo</strong></p>
                     <img src="GPGE image/logo-gpge.jpg" alt="Logo GPGE" class="project-image-v2">
                 </div>
             </div>
