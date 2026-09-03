@@ -24,7 +24,7 @@
             color: var(--text-color);
             line-height: 1.6;
             scroll-behavior: smooth;
-            overflow-x: hidden; /* Empêche le défilement horizontal si l'image dépasse encore un millimètre */
+            overflow-x: hidden;
         }
 
         header {
@@ -156,15 +156,6 @@
             margin-top: 1rem;
         }
 
-        .button-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 2rem;
-            border-top: 1px solid var(--border-color);
-            padding-top: 1.5rem;
-        }
-
         .intro-gpge-container {
             display: flex;
             gap: 2rem;
@@ -193,16 +184,65 @@
 
         .presidents-gpge-container {
             margin-top: 3rem;
-            text-align: center; /* Centre le h3 et l'image */
+            text-align: center;
         }
 
         .president-image-straight {
-            /* Rotation de 90 degrés ET réduction de la taille à 75% (-25%) */
-            /* Si tu veux la réduire de 30%, remplace 0.75 par 0.7 */
             transform: rotate(90deg) scale(0.75);
-            max-height: 800px; /* Limite la hauteur d'origine pour éviter que la largeur (après rotation) ne déborde */
-            margin: -5% auto; /* Marge négative pour compenser l'espace vide créé par le scale() */
+            max-height: 800px;
+            margin: -5% auto;
             display: block;
+        }
+
+        /* --- STYLES DU TABLEAU E5 --- */
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .e5-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--bg-color);
+            font-size: 0.9rem;
+        }
+
+        .e5-table th, .e5-table td {
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            text-align: left; /* Alignement du texte à gauche pour plus de lisibilité */
+        }
+
+        /* Centrage spécifique pour les croix */
+        .e5-table td.check, .e5-table td:not(:first-child) {
+            text-align: center;
+        }
+
+        .e5-table th {
+            background-color: var(--header-bg);
+            color: var(--accent-color);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .e5-table td:first-child {
+            font-weight: 500;
+        }
+
+        .check {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 3rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
         }
 
         @media (max-width: 768px) {
@@ -214,7 +254,7 @@
                 margin-top: 1rem;
             }
             .president-image-straight {
-                transform: rotate(90deg) scale(0.5); /* Sur mobile, on la réduit encore plus pour éviter de casser l'écran */
+                transform: rotate(90deg) scale(0.5);
             }
         }
     </style>
@@ -298,6 +338,93 @@
                 <span class="tag">Dell Support Assist</span>
                 <span class="tag">Ticketing via ZenDesk</span>
             </div>
+
+            <!-- TABLEAU E5 MIS À JOUR -->
+            <h3>Tableau de Synthèse - Épreuve E5</h3>
+            <p style="color: var(--text-muted);">Ce tableau récapitule les compétences du référentiel BTS SIO (option SISR) mises en œuvre lors de ce stage et de mon contrat d'embauche.</p>
+            
+            <div class="table-responsive">
+                <table class="e5-table">
+                    <thead>
+                        <tr>
+                            <th>Réalisations professionnelles</th>
+                            <th>Gérer le patrimoine informatique </th>
+                            <th>Répondre aux incidents et aux demandes d'assistance et d'évolution</th>
+                            <th>Développer la présence en ligne de l'organisation</th>
+                            <th>Travailler en mode projet</th>
+                            <th>Mettre à dispositions des utilisateurs un service informatique</th>
+                            <th>Organiser son développement professionel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Configuration et déploiement de postes informatiques et téléphones</td>
+                            <td class="check">X</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="check">X</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Déploiement double authentification (projet MFA)</td>
+                            <td class="check">X</td>
+                            <td></td>
+                            <td></td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Support niveau 1 et 2 et gestions de tickets via ZenDesk. Communication avec les supports Dell Support Assist + visualisation du fonctionnement d'Active Directory</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Activité sur l'infra du réseau avec les baies de brassages, vlan, mise en place de switch et réinitialisation de bornes wifi defecteuse (changement si besoin)</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Vérification des pares-feux et dépannages VPN à distance via TeamViewer</td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Renouvellement de matériel avec récupération HDD pour formatage et NAS</td>
+                            <td class="check">X</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="check">X</td>
+                        </tr>
+                        <tr>
+                            <td>Déménagement et réaménagement infrastructure informatique</td>
+                            <td class="check">X</td>
+                            <td></td>
+                            <td></td>
+                            <td class="check">X</td>
+                            <td class="check">X</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <a href="BTS_SIO_Annexe_VI.5_Epreuve E5 - Tableau de synthèse_2026_2.xlsx" class="btn" download>Télécharger le tableau E5</a>
 
             <div class="button-group">
                 <a href="accueil.html#accueil" class="btn">Retour à l'accueil</a>
