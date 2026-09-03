@@ -144,16 +144,13 @@
             height: auto;
             border-radius: 8px;
             border: 1px solid var(--border-color);
-            margin: 1rem 0;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             display: block;
         }
 
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
+        .small-img {
+            max-width: 50%;
+            margin: 1.5rem auto; 
         }
 
         .intro-gpge-container {
@@ -194,7 +191,6 @@
             display: block;
         }
 
-        /* --- STYLES DU TABLEAU E5 --- */
         .table-responsive {
             overflow-x: auto;
             margin-top: 1.5rem;
@@ -202,19 +198,19 @@
         }
 
         .e5-table {
-            width: 100%;
+            width: 90%; 
+            margin: 0 auto; 
             border-collapse: collapse;
             background-color: var(--bg-color);
-            font-size: 0.9rem;
+            font-size: 0.8rem; 
         }
 
         .e5-table th, .e5-table td {
             border: 1px solid var(--border-color);
-            padding: 1rem;
-            text-align: left; /* Alignement du texte à gauche pour plus de lisibilité */
+            padding: 0.6rem; 
+            text-align: left;
         }
 
-        /* Centrage spécifique pour les croix */
         .e5-table td.check, .e5-table td:not(:first-child) {
             text-align: center;
         }
@@ -224,6 +220,7 @@
             color: var(--accent-color);
             font-weight: 600;
             text-align: center;
+            font-size: 0.85rem;
         }
 
         .e5-table td:first-child {
@@ -233,7 +230,7 @@
         .check {
             color: var(--accent-color);
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .button-group {
@@ -255,6 +252,12 @@
             }
             .president-image-straight {
                 transform: rotate(90deg) scale(0.5);
+            }
+            .small-img {
+                max-width: 80%; 
+            }
+            .e5-table {
+                width: 100%; 
             }
         }
     </style>
@@ -307,9 +310,7 @@
                 <li>Récupération d'un NAS en fin de vie et formatage de dizaines de disques durs (HDD) d'anciens PC de GPGE.</li>
             </ul>
             
-            <div class="image-grid">
-                <img src="GPGE image/baie-de-brassage-7eme-etages.jpg" alt="Baie de brassage 7eme etage" class="project-image">
-            </div>
+            <img src="GPGE image/baie-de-brassage-7eme-etages.jpg" alt="Baie de brassage 7eme etage" class="project-image small-img">
 
             <h3>3. Support Utilisateur et Gestion de Parc (Niveau 1 & 2)</h3>
             <ul>
@@ -339,7 +340,6 @@
                 <span class="tag">Ticketing via ZenDesk</span>
             </div>
 
-            <!-- TABLEAU E5 MIS À JOUR -->
             <h3>Tableau de Synthèse - Épreuve E5</h3>
             <p style="color: var(--text-muted);">Ce tableau récapitule les compétences du référentiel BTS SIO (option SISR) mises en œuvre lors de ce stage et de mon contrat d'embauche.</p>
             
@@ -348,12 +348,12 @@
                     <thead>
                         <tr>
                             <th>Réalisations professionnelles</th>
-                            <th>Gérer le patrimoine informatique </th>
-                            <th>Répondre aux incidents et aux demandes d'assistance et d'évolution</th>
-                            <th>Développer la présence en ligne de l'organisation</th>
+                            <th>Gérer le patrimoine</th>
+                            <th>Répondre aux incidents</th>
+                            <th>Développer la présence en ligne</th>
                             <th>Travailler en mode projet</th>
-                            <th>Mettre à dispositions des utilisateurs un service informatique</th>
-                            <th>Organiser son développement professionel</th>
+                            <th>Mettre à dispo. un service</th>
+                            <th>Organiser son dév. pro.</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -412,7 +412,7 @@
                             <td class="check">X</td>
                         </tr>
                         <tr>
-                            <td>Déménagement et réaménagement infrastructure informatique</td>
+                            <td>Déménagement et réaménagement infra info</td>
                             <td class="check">X</td>
                             <td></td>
                             <td></td>
